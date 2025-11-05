@@ -1,0 +1,444 @@
+*{
+    margin: 0%;
+    padding:0%;
+    z-index: -1;
+    box-sizing: border-box;
+}
+
+.nav1{
+    color: aliceblue;
+   position: fixed;        /* stays on top while scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 50px;
+  z-index: 100;           /* 👈 puts navbar above video */
+  background: rgba(0, 0, 0, 0.4); /* optional transparency */
+  backdrop-filter: blur(4px);     /* gives a modern glassy look */
+}
+
+.main1{
+    height: 105px;
+    width:150px;
+    position: relative;
+ right:180px;
+
+}
+.video-background {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* keeps the video ratio */
+  z-index: -1; /* sends the video behind everything */
+}
+
+.ul1{
+    display: flex;
+    list-style: none;
+    font-size:x-large;
+    gap: 40px;
+    position: relative;
+    left: 40px;
+
+}
+.content{
+
+font-family: 'Anton', sans-serif;
+  font-size: 23px;            /* large and cinematic */
+  color: aliceblue;
+    position: relative;
+    top: 300px;
+    left: 110px;
+}
+
+.section2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 10%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  gap: 50px;
+  flex-wrap: wrap; /* stacks items on small screens */
+  backdrop-filter: blur(6px);
+  position: relative;
+  overflow: hidden;
+}
+
+.section2::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0));
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section2 p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 600px;
+  z-index: 1;
+  text-align: justify;
+  color: rgba(255, 255, 255, 0.9);
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.section2 p br {
+  display: none; /* removes hard line breaks on large screens */
+}
+
+.section2 img.huspic {
+  width: 450px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  z-index: 1;
+  animation: fadeInRight 1s ease forwards;
+}
+
+.section2 img.huspic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(255, 255, 255, 0.2);
+}
+
+.span1{
+   font-size: larger;
+   font-weight: bold;
+}
+
+.section3 {
+  color: antiquewhite;
+  background-image: url("hk.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: brightness(0.7);
+}
+
+.section3 h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  letter-spacing: 3px;
+}
+
+/* Flex container for all category cards */
+.sec3div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Individual category boxes */
+.sec3div div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* centers image + text horizontally */
+  justify-content: center;  /* centers them vertically */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 180px;
+  height: 200px;
+}
+
+.sec3div div:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* Image styling */
+.sec3div img {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.contact-section {
+    background: radial-gradient(circle at center, #3a3a3a 0%, #0e0e0e 80%);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(150, 112, 62);
+  text-align: center;
+  padding: 40px;
+  backdrop-filter: blur(10px); /* glass effect */
+}
+
+.contact-section h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color:rgb(150, 112, 62) ;
+}
+
+.contact-form {
+  background: rgba(0, 0, 0, 0.6); /* transparent glass box */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form .form-group {
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  backdrop-filter: blur(3px);
+  transition: all 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #bbb;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.contact-form button {
+  background: transparent;
+  border: 2px solid antiquewhite;
+  color: antiquewhite;
+  padding: 12px 0;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: antiquewhite;
+  color: black;
+  transform: scale(1.05);
+}
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 15px 40px;
+  color: #fff;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
+  font-family: Arial, sans-serif;
+}
+a{
+    color: white;
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.rights {
+  font-size: 14px;
+  opacity: 0.8;
+}
+footer{
+     position: relative;
+  z-index: 10;
+}
+/* 📱 RESPONSIVE STYLING — keeps desktop view unchanged */
+
+/* For tablets and small laptops */
+@media (max-width: 1024px) {
+
+  .nav1 {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 20px;
+  }
+
+  .main1 {
+    right: 0;
+    height: 90px;
+    width: 130px;
+  }
+
+  .ul1 {
+    gap: 25px;
+    font-size: large;
+    left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .section2 {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 5%;
+  }
+
+  .section2 p {
+    max-width: 90%;
+    text-align: justify;
+  }
+
+  .section2 img.huspic {
+    width: 80%;
+    max-width: 400px;
+  }
+
+  .section3 {
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .sec3div {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .sec3div div {
+    width: 160px;
+    height: 180px;
+  }
+
+  .contact-section {
+    padding: 60px 20px;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 600px) {
+
+  .ul1 {
+    gap: 15px;
+    font-size: medium;
+  }
+
+  .content {
+    top: 200px;
+    left: 20px;
+    font-size: 16px;
+  }
+
+  .section2 {
+    padding: 50px 5%;
+  }
+
+  .section2 img.huspic {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .section3 h1 {
+    font-size: 2rem;
+  }
+
+  .sec3div {
+    gap: 20px;
+  }
+
+  .sec3div div {
+    width: 140px;
+    height: 160px;
+    font-size: 1rem;
+  }
+
+  .contact-section h1 {
+    font-size: 2rem;
+  }
+
+  .contact-form {
+    padding: 25px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .social-icons img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .rights {
+    font-size: 12px;
+  }
+}
